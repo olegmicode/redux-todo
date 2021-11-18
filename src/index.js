@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { Provider } from 'react-redux';
+import CssBaseline from '@mui/material/CssBaseline';
+
+import store from './store'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <CssBaseline />
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
